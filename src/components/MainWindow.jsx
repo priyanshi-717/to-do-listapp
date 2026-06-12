@@ -32,16 +32,13 @@ export function MainWindow() {
   function openCreateDialog() {
     setDialogMode("create");
     setEditingIndex(null);
-
     setHeading("");
     setTasks([""]);
-
     setShowDialog(true);
   }
 
   function openUpdateDialog(index) {
     const work = works[index];
-
     setDialogMode("update");
     setEditingIndex(index);
 
@@ -107,7 +104,9 @@ export function MainWindow() {
               ))}
             </ul>
 
-            <div className="update-btn-container">
+            <button className="input-check"><input type="checkbox" size={50} />Status</button>
+            <span className="update-btn-container">
+              
               <button
                 className="update-btn"
                 onClick={() =>
@@ -116,7 +115,7 @@ export function MainWindow() {
               >
                 Update
               </button>
-            </div>
+            </span>
           </div>
         ))}
 
